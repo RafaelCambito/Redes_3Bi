@@ -6,3 +6,20 @@ http://localhost:8080
 
 # Parar
 docker-compose down
+
+
+#Criar minha imagem do node pelo Dockerfile
+docker build -t seu_usuario/nome_da_imagem:tag .
+docker login
+docker tag seu_usuario/nome_da_imagem:tag seu_usuario/nome_da_imagem:tag
+docker push seu_usuario/nome_da_imagem:tag
+
+#listar portas em uso no linux 
+lsof -i -n -P | grep LISTEN
+kill pid  
+
+#verificar e inspecionar redes internas criadas pelo docker
+docker network ls  
+docker network inspect <ID>
+
+
